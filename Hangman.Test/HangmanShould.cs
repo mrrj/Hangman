@@ -28,6 +28,16 @@ namespace Hangman.Test
             Assert.Equal(newGame.theWord.Length,newGame.secretWord.Length);
         }
 
+        [Fact]
+        public void KnowifStringAndCharArrayAreNotSameLength()
+        {
+            String str = "Hello";
+            char[] chars = new char[] {'h','e','y' };
+
+            HangmanGame newGame = new HangmanGame();
+            Assert.False(newGame.StringEqualsCharArray(str,chars));
+        }
+
 
     }
 }

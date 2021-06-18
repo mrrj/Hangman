@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Hangman
 {
     public class HangmanGame
     {
-        public String[] secretWords = new String[] { "banana", "star", "dough" };
+        public String[] secretWords = new String[] { "banana", "star", "apple", "cat" };
         public int guessesLeft;
         public StringBuilder guessedLetters;
 
@@ -29,6 +30,7 @@ namespace Hangman
 
             }
         }
+
 
         public void PlayGame()
         {
@@ -136,7 +138,7 @@ namespace Hangman
             return letterIsInWord;
         }
 
-         bool StringEqualsCharArray(String str, char[] chars)
+         public bool StringEqualsCharArray(String str, char[] chars)
         {
             if (str.Length == chars.Length)
             {
