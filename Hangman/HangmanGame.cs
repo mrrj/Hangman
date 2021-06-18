@@ -22,7 +22,7 @@ namespace Hangman
             guessedLetters = new StringBuilder();
             Random rand = new Random();
             int wordIndex = rand.Next(0, secretWords.Length);
-            secretWord = secretWords[wordIndex];
+            secretWord = secretWords[wordIndex];         
             theWord = new char[secretWord.Length];
             for (int i = 0; i < theWord.Length; i++)
             {
@@ -121,7 +121,7 @@ namespace Hangman
             }
         }
 
-        bool IsInWord(char letter)
+        public bool IsInWord(char letter)
         {
             bool letterIsInWord = false;
 
@@ -137,6 +137,7 @@ namespace Hangman
 
             return letterIsInWord;
         }
+
 
          public bool StringEqualsCharArray(String str, char[] chars)
         {
